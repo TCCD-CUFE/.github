@@ -1,32 +1,58 @@
-name: 🚀 Feature Request
-description: Suggest an idea for this project
-title: "[FEATURE] "
-labels: ["enhancement"]
+name: "🚀 Feature Request"
+description: "Suggest an idea for this project."
+title: "[FEATURE]: "
+labels: ["enhancement", "triage"]
 body:
   - type: markdown
     attributes:
       value: |
-        Please verify that your idea is not already being discussed in existing issues.
+        ## 💡 Feature Request
+        Thanks for your interest in improving the project! Please check existing issues to avoid duplicates.
 
   - type: textarea
     id: problem
     attributes:
-      label: Is your feature request related to a problem?
-      description: Please describe the problem you are trying to solve.
-      placeholder: I am always frustrated when...
+      label: "🤔 Is your feature request related to a problem?"
+      description: "A clear and concise description of what the problem is."
+      placeholder: "I'm always frustrated when..."
     validations:
       required: true
 
   - type: textarea
     id: solution
     attributes:
-      label: Describe the solution you'd like
-      description: A clear and concise description of what you want to happen.
+      label: "✨ Describe the solution you'd like"
+      description: "A clear and concise description of the proposed feature."
+      placeholder: "I would like the ability to..."
     validations:
       required: true
 
   - type: textarea
     id: alternatives
     attributes:
-      label: Describe alternatives you've considered
-      description: Have you considered any other solutions?
+      label: "🔄 Describe alternatives you've considered"
+      description: "A description of any alternative solutions or features you've considered."
+    validations:
+      required: false
+
+  - type: textarea
+    id: mockups
+    attributes:
+      label: "🎨 Mockups / Sketches"
+      description: |
+        Upload any mockups, screenshots, or diagrams that demonstrate the feature.
+        You can drag and drop images here.
+      placeholder: "![Mockup](...)"
+    validations:
+      required: false
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: "✅ Acceptance Criteria"
+      description: "What are the specific requirements for this feature to be considered complete?"
+      placeholder: |
+        - [ ] User can click button X
+        - [ ] System saves data Y
+    validations:
+      required: false

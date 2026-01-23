@@ -1,27 +1,28 @@
-name: 🐞 Bug Report
-description: Create a report to help us improve
-title: "[BUG] "
+name: "🐛 Bug Report"
+description: "Submit a report to help us improve the project."
+title: "[BUG]: "
 labels: ["bug", "triage"]
 body:
   - type: markdown
     attributes:
       value: |
-        Thanks for taking the time to fill out this bug report!
-  
+        ## Thank you for reporting a bug!
+        Please fill out the form below with as much detail as possible.
+
   - type: textarea
     id: description
     attributes:
-      label: Describe the bug
-      description: A clear and concise description of what the bug is.
-      placeholder: I clicked the submit button and nothing happened...
+      label: "📝 Description"
+      description: "A clear and concise description of what the bug is."
+      placeholder: "I clicked the submit button, but nothing happened..."
     validations:
       required: true
 
   - type: textarea
     id: reproduction
     attributes:
-      label: Steps to Reproduce
-      description: Please list the steps required to reproduce the bug.
+      label: "🔄 Steps to Reproduce"
+      description: "Detailed steps to reproduce the behavior."
       placeholder: |
         1. Go to '...'
         2. Click on '...'
@@ -30,23 +31,56 @@ body:
     validations:
       required: true
 
-  - type: dropdown
-    id: os
+  - type: textarea
+    id: expected-behavior
     attributes:
-      label: Operating System
-      description: Which OS were you using when the bug occurred?
-      options:
-        - Windows
-        - macOS
-        - Linux (Fedora, Ubuntu, etc.)
-        - iOS
-        - Android
+      label: "✅ Expected Behavior"
+      description: "A clear and concise description of what you expected to happen."
+      placeholder: "The form should submit successfully and show a success message."
     validations:
       required: true
 
   - type: textarea
+    id: screenshots
+    attributes:
+      label: "🖼️ Screenshots / Video"
+      description: |
+        If applicable, add screenshots or a screen recording to help explain your problem.
+        You can simply drag and drop images here.
+      placeholder: "![Screenshot](...)"
+    validations:
+      required: false
+
+  - type: dropdown
+    id: environment
+    attributes:
+      label: "💻 Environment"
+      description: "Which environment did this occur in?"
+      options:
+        - "Production"
+        - "Staging"
+        - "Local Development"
+        - "Other"
+    validations:
+      required: true
+
+  - type: input
+    id: os
+    attributes:
+      label: "🖥️ Operating System"
+      description: "e.g., Windows 11, macOS Sequoia, Ubuntu 24.04"
+      placeholder: "macOS 14.2"
+
+  - type: input
+    id: browser
+    attributes:
+      label: "🌐 Browser"
+      description: "e.g., Chrome 120, Firefox 121, Safari"
+      placeholder: "Chrome 121"
+
+  - type: textarea
     id: logs
     attributes:
-      label: Relevant Log Output
-      description: Please copy and paste any relevant log output.
+      label: "📜 Relevant Log Output"
+      description: "Please copy and paste any relevant console logs or error messages. Use code blocks."
       render: shell
